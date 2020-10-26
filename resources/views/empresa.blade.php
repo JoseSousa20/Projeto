@@ -3,8 +3,9 @@
 Empresa
 @endsection
 @section('header')
-Empresa
 @endsection
 @section('conteudo')
-   <h4>O site consiste em juntar varios jornais da europa todo no mesmo  site</h4>
+<br>
+<h3>Empresa</h3>
+   <h4>Este site é de noticias desportivos que consiste em juntar varios jornais da europa todo no mesmo sitio para ser mais facil navegar em varios jornais da europa </h4>
 @endsection

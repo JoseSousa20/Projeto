@@ -3,10 +3,11 @@
 Formulário submetido
 @endsection
 @section('header')
-Informação enviada através de form
 @endsection
 @section('conteudo')
-   {{$nome}}<br>
-   {{$morada}}<br>
-   {{$automovel}}<br>
+<br>
+<h3>Formulário submetido</h3>
+   <h5>Nome: </h5>{{$nome}}<br>
+   <h5>Password: </h5>{{$password}}<br>
+   <h5>Jornal Preferido: </h5S>{{$jornal}}<br>
 @endsection

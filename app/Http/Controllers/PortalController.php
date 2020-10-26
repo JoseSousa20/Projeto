@@ -14,6 +14,7 @@ class PortalController extends Controller
         'https://www.theguardian.com/uk/sport',
         'https://www.thesun.co.uk/sport',
         'https://www.lequipe.fr/',
+        'https://www.augsburger-allgemeine.de'
 
     ];
     public function index() {
@@ -21,7 +22,8 @@ class PortalController extends Controller
     }
 
     public function noticias() {
-        return view('noticias', ['noticias' => $this ->sites]);
+        return view('noticias', ['sites' => $this ->sites]);
+
     }
 
     public function empresa() {
@@ -42,13 +44,13 @@ class PortalController extends Controller
 
     public function enviado(Request $req) {
         $nome = $req -> nome;
-        $morada = $req -> morada;
-        $automovel = $req -> automovel;
+        $jornal = $req -> jornal;
+        $password = $req -> password;
 
-        return view('form-enviado' , [
+        return view('enviado' , [
         'nome' =>$nome,
-        'morada' =>$morada,
-        'automovel' =>$automovel
+        'jornal' =>$jornal,
+        'password' =>$password
         ]);
     }
 }

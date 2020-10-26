@@ -3,22 +3,31 @@
 Formulario
 @endsection
 @section('header')
-Formulario
 @endsection
 @section('conteudo')
-    <form method="post" action="{{route('form')}}">
-    @csrf
+<br>
+     <h2>Formulario</h2>    
+
+     <form method="post" action="{{route('enviado')}}">
+     @csrf
+  <div class="form-group">
     <label for="nome">Nome</label>
-    <input type="text" name="nome">
-    <label for="morada">Morada</label>
-    <input type="text" name="morada">
-    <label for="automovel">Automóvel</label>
-    <select name="automovel">
-           <option value="volvo">volvo</option>
-           <option value="saab">Saab</option>
-           <option value="mercedes">Mercedes</option>
-           <option value="Audi">Audi</option>
+    <input type="text" class="form-control" name="nome" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="password">
+  </div>
+  <div class="form-group">
+  <label for="jornal">Jornal Perferido</label>
+  <select name="jornal">
+           <option value="abola">A Bola</option>
+           <option value="record">Record</option>
+           <option value="ojogo">O jogo</option>
+           <option value="maisfutebol">Maisfutebol</option>
         </select>
-        <button type="submit">enviar</button>
-        </form>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
 @endsection
